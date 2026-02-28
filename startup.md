@@ -26,6 +26,28 @@
 
 <hr>
 
+# Cydonia系列
+
+## Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
+
+### 倉庫
+  - https://huggingface.co/mradermacher/Cydonia-24B-v4.3-heretic-v4-i1-GGUF
+
+### 使用腳本下載
+```
+./hf_download.sh mradermacher/Cydonia-24B-v4.3-heretic-v4-i1-GGUF Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
+```
+
+### 啟動方式
+```
+./auto_launch.sh Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
+```
+### 心得
+- 
+
+
+<hr>
+
 # Nemo系列
 
 ## Mistral-Nemo-Instruct-2407-OmniWriter.i1-Q4_K_M.gguf
