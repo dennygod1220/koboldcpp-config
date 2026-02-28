@@ -63,6 +63,8 @@
 ### 啟動方式
 ```
 ./auto_launch.sh Mistral-Nemo-Instruct-2407-OmniWriter.i1-Q4_K_M.gguf
+./auto_launch_q4kv.sh Mistral-Nemo-Instruct-2407-OmniWriter.i1-Q4_K_M.gguf
+./auto_launch_q8kv.sh Mistral-Nemo-Instruct-2407-OmniWriter.i1-Q4_K_M.gguf
 ```
 ### 心得
 - 
