@@ -41,6 +41,8 @@
 ### 啟動方式
 ```
 ./auto_launch.sh Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
+./auto_launch_q4kv.sh Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
+./auto_launch_q8kv.sh Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
 ```
 ### 心得
 - 
