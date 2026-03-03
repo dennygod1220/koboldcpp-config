@@ -67,6 +67,24 @@
 ### 心得
 - 
 
+---
+
+# Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF
+
+### 倉庫
+  - https://huggingface.co/mradermacher/Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF
+
+### 使用腳本下載
+```
+./hf_download.sh mradermacher/Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF Mistral-Small-22B-ArliAI-RPMax-v1.1.i1-Q4_K_M.gguf
+```
+
+### 啟動方式
+```
+./auto_launch.sh Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-Q4_K_M.gguf
+```
+### 心得
+- 
 
 <hr>
 
