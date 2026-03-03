@@ -81,7 +81,7 @@
 
 ### 啟動方式
 ```
-./auto_launch.sh Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-Q4_K_M.gguf
+./auto_launch.sh Mistral-Small-22B-ArliAI-RPMax-v1.1.i1-Q4_K_M.gguf
 ```
 ### 心得
 - 
