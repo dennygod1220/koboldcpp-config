@@ -71,6 +71,25 @@
 ### 心得
 - 
 
+## NemoMix-Unleashed-12B-i1-GGUF
+
+### 倉庫
+  - https://huggingface.co/mradermacher/NemoMix-Unleashed-12B-i1-GGUF
+
+### 使用腳本下載
+```
+./hf_download.sh mradermacher/NemoMix-Unleashed-12B-i1-GGUF NemoMix-Unleashed-12B.i1-Q4_K_M.gguf
+```
+
+### 啟動方式
+```
+./auto_launch.sh NemoMix-Unleashed-12B.i1-Q4_K_M.gguf
+./auto_launch_q4kv.sh NemoMix-Unleashed-12B.i1-Q4_K_M.gguf
+./auto_launch_q8kv.sh NemoMix-Unleashed-12B.i1-Q4_K_M.gguf
+```
+### 心得
+- 
+
 ---
 
 # Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF
@@ -88,7 +107,7 @@
 ./auto_launch.sh Mistral-Small-22B-ArliAI-RPMax-v1.1.i1-Q4_K_M.gguf
 ```
 ### 心得
-- 
+- 暫時還不知道怎麼設定比較好
 
 <hr>
 
