@@ -1,31 +1,3 @@
-
-## Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
-  ./koboldcpp-linux-x64 \
-  --model Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf \
-  --gpulayers 41 \
-  --contextsize 98304  \
-  --port 5001 \
-  --host 0.0.0.0
-  --flashattention
-
-## Mistral-Nemo-Instruct-2407-OmniWriter.i1-Q4_K_M.gguf
-./koboldcpp-linux-x64 \
-  --model Mistral-Nemo-Instruct-2407-OmniWriter.i1-Q4_K_M.gguf \
-  --gpulayers 41 \
-  --contextsize 98304 \
-  --port 5001 \
-  --host 0.0.0.0
-
-## Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored.i1-Q4_K_M.gguf
-  ./koboldcpp-linux-x64 \
-  --model Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored.i1-Q4_K_M.gguf \
-  --gpulayers 41 \
-  --contextsize 65536 \
-  --port 5001 \
-  --host 0.0.0.0
-
-<hr>
-
 # Cydonia系列
 
 ## Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf
@@ -92,24 +64,47 @@
 
 ---
 
-# Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF
+## bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF
 
 ### 倉庫
-  - https://huggingface.co/mradermacher/Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF
+  - https://huggingface.co/bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF
 
 ### 使用腳本下載
 ```
-./hf_download.sh mradermacher/Mistral-Small-22B-ArliAI-RPMax-v1.1-i1-GGUF Mistral-Small-22B-ArliAI-RPMax-v1.1.i1-Q4_K_M.gguf
+./hf_download.sh bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF TheDrummer_Rocinante-X-12B-v1-Q6_K.gguf
 ```
 
 ### 啟動方式
 ```
-./auto_launch.sh Mistral-Small-22B-ArliAI-RPMax-v1.1.i1-Q4_K_M.gguf
+./auto_launch.sh TheDrummer_Rocinante-X-12B-v1-Q6_K.gguf
+./auto_launch_q4kv.sh TheDrummer_Rocinante-X-12B-v1-Q6_K.gguf
+./auto_launch_q8kv.sh TheDrummer_Rocinante-X-12B-v1-Q6_K.gguf
 ```
 ### 心得
-- 暫時還不知道怎麼設定比較好
+- 
 
-<hr>
+---
+
+
+## mradermacher/Huihui-Qwen3.5-35B-A3B-abliterated-i1-GGUF
+
+### 倉庫
+  - https://huggingface.co/mradermacher/Huihui-Qwen3.5-35B-A3B-abliterated-i1-GGUF
+
+### 使用腳本下載
+```
+./hf_download.sh mradermacher/Huihui-Qwen3.5-35B-A3B-abliterated-i1-GGUF Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf
+```
+
+### 啟動方式
+```
+./auto_launch.sh Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf
+./auto_launch_q4kv.sh Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf
+./auto_launch_q8kv.sh Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf
+```
+### 心得
+- 
+
 
 # GLM系列
 
@@ -130,45 +125,3 @@
 ```
 ### 心得
 - 
-
-## GLM-4.7-Flash-absolute-heresy.i1-Q4_K_M.gguf
-
-### 倉庫
-  - https://huggingface.co/mradermacher/GLM-4.7-Flash-absolute-heresy-i1-GGUF
-
-### 使用腳本下載
-  ```
-  ./hf_download.sh mradermacher/GLM-4.7-Flash-absolute-heresy-i1-GGUF GLM-4.7-Flash-absolute-heresy.i1-Q4_K_M.gguf
-
-  ```
-
-### 啟動方式
-```
-./koboldcpp-linux-x64 \
-  --model GLM-4.7-Flash-absolute-heresy.i1-Q4_K_M.gguf \
-  --gpulayers 99 \
-  --contextsize 131072 \
-  --port 5001 \
-  --host 0.0.0.0 \
-  --flashattention
-```
-### 心得
-- 模型搭配"Guided Generations Settings"不太好用，會一直重複場景和思考
-
-## mradermacher/GLM-4.7-Flash-REAP-23B-A3B-absolute-heresy-i1-GGUF
-
-### 倉庫
-  - https://huggingface.co/mradermacher/GLM-4.7-Flash-REAP-23B-A3B-absolute-heresy-i1-GGUF
-
-### 使用腳本下載
-```
-./hf_download.sh mradermacher/GLM-4.7-Flash-REAP-23B-A3B-absolute-heresy-i1-GGUF GLM-4.7-Flash-REAP-23B-A3B-absolute-heresy.i1-Q4_K_M.gguf
-
-```
-
-### 啟動方式
-```
-./auto_launch.sh GLM-4.7-Flash-REAP-23B-A3B-absolute-heresy.i1-Q4_K_M.gguf
-```
-### 心得
-- 不行，會一直重複場景和思考
