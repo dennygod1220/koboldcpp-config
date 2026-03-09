@@ -64,6 +64,27 @@
 
 ---
 
+## mradermacher/MS3.2-PaintedFantasy-Visage-v4-34B-i1-GGUF
+
+### 倉庫
+  - https://huggingface.co/mradermacher/MS3.2-PaintedFantasy-Visage-v4-34B-i1-GGUF
+
+### 使用腳本下載
+```
+./hf_download.sh mradermacher/MS3.2-PaintedFantasy-Visage-v4-34B-i1-GGUF MS3.2-PaintedFantasy-Visage-v4-34B.i1-Q4_K_M.gguf
+```
+
+### 啟動方式
+```
+./auto_launch.sh MS3.2-PaintedFantasy-Visage-v4-34B.i1-Q4_K_M.gguf
+./auto_launch_q4kv.sh MS3.2-PaintedFantasy-Visage-v4-34B.i1-Q4_K_M.gguf
+./auto_launch_q8kv.sh MS3.2-PaintedFantasy-Visage-v4-34B.i1-Q4_K_M.gguf
+```
+### 心得
+- 
+
+# TheDrummer系列
+
 ## bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF
 
 ### 倉庫
@@ -81,7 +102,28 @@
 ./auto_launch_q8kv.sh TheDrummer_Rocinante-X-12B-v1-Q6_K.gguf
 ```
 ### 心得
-- 
+-挺棒的，除了回覆會有簡短的類似Cydonia 24B那樣重新思考的句子外，其餘的都不錯
+
+---
+
+## mradermacher/TheDrummer-Skyfall-31B-v4.1-Heretic-Clear-i1-GGUF
+
+### 倉庫
+  - https://huggingface.co/mradermacher/TheDrummer-Skyfall-31B-v4.1-Heretic-Clear-i1-GGUF
+
+### 使用腳本下載
+```
+./hf_download.sh mradermacher/TheDrummer-Skyfall-31B-v4.1-Heretic-Clear-i1-GGUF TheDrummer-Skyfall-31B-v4.1-Heretic-Clear.i1-Q4_K_M.gguf
+```
+
+### 啟動方式
+```
+./auto_launch.sh TheDrummer-Skyfall-31B-v4.1-Heretic-Clear.i1-Q4_K_M.gguf
+./auto_launch_q4kv.sh TheDrummer-Skyfall-31B-v4.1-Heretic-Clear.i1-Q4_K_M.gguf
+./auto_launch_q8kv.sh TheDrummer-Skyfall-31B-v4.1-Heretic-Clear.i1-Q4_K_M.gguf
+```
+### 心得
+- 太嚴格，一直拒絕
 
 ---
 

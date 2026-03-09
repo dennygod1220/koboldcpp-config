@@ -5,6 +5,7 @@
 # 使用方式: ./auto_launch_q4kv.sh <模型路徑>
 
 MODEL_FILE="$1"
+CUSTOM_CTX="$2"  # 可選: 手動指定 context size
 
 # 檢查參數
 if [ -z "$MODEL_FILE" ]; then
@@ -36,19 +37,42 @@ MODEL_SIZE_MIB=$(du -m "$MODEL_FILE" | cut -f1)
 AVAIL_FOR_KV=$(($TOTAL_VRAM - $MODEL_SIZE_MIB - 3072))
 
 # 4. 估算最佳 Context Size
-# --quantkv 2 使用 Q4 KV cache，每 token 佔用約 32 bytes (FP16 的 1/4)
-# 公式: (可用的 MiB * 1024) / 32
-calc_ctx=$(( ($AVAIL_FOR_KV * 1024) / 32 ))
+# --quantkv 2 使用 Q4 KV cache，每 token 佔用約為 FP16 的 1/4
+# 不同規模模型的保守 bytes/token 估算 (Q4 KV):
+#   ~12B  → ~32 KiB/token
+#   ~24B  → ~42 KiB/token
+#   ~32-35B → ~62 KiB/token
+# 30B+ Q4_K_M 模型大約 17-22 GB，因此門檻設為 15000 MiB
+if [ "$MODEL_SIZE_MIB" -ge 15000 ]; then
+    # 大型 30B+ 模型 (>15GB)，使用 62 KiB/token
+    KV_BYTES_PER_TOKEN_KIB=62
+elif [ "$MODEL_SIZE_MIB" -ge 10000 ]; then
+    # 中型 20-30B 模型 (10-15GB)，使用 42 KiB/token
+    KV_BYTES_PER_TOKEN_KIB=42
+else
+    # 小型 ≤12B 模型 (<10GB)，使用 33 KiB/token
+    KV_BYTES_PER_TOKEN_KIB=33
+fi
+
+# 公式: (可用 MiB × 1024 KiB/MiB) / KiB_per_token
+calc_ctx=$(( ($AVAIL_FOR_KV * 1024) / $KV_BYTES_PER_TOKEN_KIB ))
 
 # 限制最大與最小範圍 (最小 8k, 最大 131072)
 if [ $calc_ctx -lt 8192 ]; then calc_ctx=8192; fi
 if [ $calc_ctx -gt 131072 ]; then calc_ctx=131072; fi
 
+# 若使用者手動指定 context size，則覆蓋自動計算值
+if [ -n "$CUSTOM_CTX" ]; then
+    echo "⚙️  使用手動指定 Context Size: $CUSTOM_CTX (自動計算值: $calc_ctx)"
+    calc_ctx=$CUSTOM_CTX
+fi
+
 echo "========================================================"
 echo "🚀 啟動模型: $MODEL_FILE"
 echo "📊 模型大小: $MODEL_SIZE_MIB MiB"
 echo "💎 總顯存:   $TOTAL_VRAM MiB"
-echo "🧠 自動優化 Context Size: $calc_ctx (quantkv 2 模式)"
+echo "💡 KV係數:   $KV_BYTES_PER_TOKEN_KIB KiB/token (Q4量化)"
+echo "🧠 Context Size: $calc_ctx"
 echo "⚡ 優化參數: --gpulayers 99 --flashattention --quantkv 2"
 echo "========================================================"
 
