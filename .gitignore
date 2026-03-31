@@ -1,3 +1,4 @@
 *.gguf
 koboldcpp-linux-x64
 .cache/
+kobold_run.log
