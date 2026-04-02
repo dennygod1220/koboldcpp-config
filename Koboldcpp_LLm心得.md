@@ -1,11 +1,13 @@
 ## Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf
-./koboldcpp-linux-x64 Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf \
+  ./koboldcpp-linux-x64 Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf \
   --usecublas \
   --gpulayers 99 \
   --n-cpu-moe 28 \
-  --contextsize 131072 \
+  --contextsize 65536 \
   --flashattention \
   --quantkv 2 \
+  --threads 6 \
+  --batch-size 4096 \
   --host 0.0.0.0 --port 5001 2>&1 | tee kobold_run.log
 
 ## Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf
