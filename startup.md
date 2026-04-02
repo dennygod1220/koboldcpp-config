@@ -148,22 +148,3 @@
 - 
 
 
-# GLM系列
-
-## mradermacher/Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored-i1-GGUF
-
-### 倉庫
-  - https://huggingface.co/mradermacher/Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored-i1-GGUF
-
-### 使用腳本下載
-```
-./hf_download.sh mradermacher/Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored-i1-GGUF Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored.i1-Q4_K_M.gguf
-
-```
-
-### 啟動方式
-```
-./auto_launch.sh Dolphin-Mistral-GLM-4.7-Flash-24B-Venice-Edition-Thinking-Uncensored.i1-Q4_K_M.gguf
-```
-### 心得
-- 
