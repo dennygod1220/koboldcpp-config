@@ -1,3 +1,17 @@
+##  gemma-4-26b-a4b-it-heretic.q4_k_m.gguf 
+  ./koboldcpp-linux-x64 gemma-4-26b-a4b-it-heretic.q4_k_m.gguf \
+  --usecublas \
+  --gpulayers 99 \
+  --n-cpu-moe 28 \
+  --contextsize 65536 \
+  --flashattention \
+  --quantkv 3 \
+  --threads 6 \
+  --jinja \
+  --useswa \
+  --batch-size 2048 \
+  --host 0.0.0.0 --port 5001 2>&1 | tee kobold_run.log
+
 ## Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf
   ./koboldcpp-linux-x64 Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf \
   --usecublas \
