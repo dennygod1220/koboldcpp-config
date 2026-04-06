@@ -1,3 +1,23 @@
+##  gemma-4-26b-a4b-it-heretic.q4_k_m.gguf + Embed text + mmprojcpu
+  ./koboldcpp-linux-x64 gemma-4-26b-a4b-it-heretic.q4_k_m.gguf \
+  --embeddingsmodel nomic-embed-text-v2-moe.Q8_0.gguf \
+  --mmproj mmproj-google_gemma-4-26B-A4B-it-bf16.gguf \
+  --mmprojcpu \
+  --usecuda \
+  --gpulayers 99 \
+  --n-cpu-moe 28 \
+  --contextsize 65536 \
+  --flashattention \
+  --quantkv 1 \
+  --threads 5 \
+  --jinja \
+  --useswa \
+  --batch-size 2048 \
+  --multiuser 4 \
+  --defaultgenamt 4096 \
+  --host 0.0.0.0 --port 5001 2>&1 | tee kobold_run.log
+
+  --jinjatools \
 ##  gemma-4-26b-a4b-it-heretic.q4_k_m.gguf 
   ./koboldcpp-linux-x64 gemma-4-26b-a4b-it-heretic.q4_k_m.gguf \
   --usecublas \
@@ -14,24 +34,33 @@
 
 ## Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf
   ./koboldcpp-linux-x64 Nemotron-Cascade-2-30B-A3B-heretic.i1-Q4_K_M.gguf \
-  --usecublas \
+  --embeddingsmodel nomic-embed-text-v2-moe.Q8_0.gguf \
+  --usecuda \
   --gpulayers 99 \
   --n-cpu-moe 28 \
   --contextsize 65536 \
   --flashattention \
-  --quantkv 2 \
-  --threads 6 \
+  --quantkv 3 \
+  --threads 5 \
   --batch-size 4096 \
+  --defaultgenamt 8192 \
+  --multiuser 4 \
+  --jinja \
   --host 0.0.0.0 --port 5001 2>&1 | tee kobold_run.log
 
-## Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf
-./koboldcpp-linux-x64 Huihui-Qwen3.5-35B-A3B-abliterated.i1-Q4_K_M.gguf \
-  --usecublas \
+## Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf
+./koboldcpp-linux-x64 Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf \
+  --embeddingsmodel nomic-embed-text-v2-moe.Q8_0.gguf \
+  --usecuda \
   --gpulayers 99 \
   --n-cpu-moe 28 \
   --contextsize 131072 \
   --flashattention \
   --quantkv 2 \
+  --threads 5 \
+  --batch-size 4096 \
+  --multiuser 4 \
+  --jinja \
   --host 0.0.0.0 --port 5001 2>&1 | tee kobold_run.log
 
 ## Cydonia-24B-v4.3-heretic-v4.i1-Q4_K_M.gguf

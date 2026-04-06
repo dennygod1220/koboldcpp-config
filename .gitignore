@@ -2,3 +2,8 @@
 koboldcpp-linux-x64
 .cache/
 kobold_run.log
+Hermes/logs/*
+Hermes/data/*
+Hermes/.env
+Hermes/data/temp_outputs/*
+Hermes/data/comfyui_output/*

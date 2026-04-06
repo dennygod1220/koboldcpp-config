@@ -1,0 +1,22 @@
+[30;1m2026-04-06 19:22:40[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2026-04-06 19:22:42[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 06949ee4c7a0f6fca861b3574c50a91f).
+[Bot] 已連線 | 使用者名稱: Hermes
+[Bot] ComfyUI 端點: https://still-aimed-recorders-hay.trycloudflare.com/
+------------------------------------------
+[Bot] 收到任務: <@&1490127956620611688> 幫我把他的比基尼脫掉 | 圖片: https://cdn.discordapp.com/attachments/1490127781697290425/1490794023114506251/f81c07cf-81dc-4c80-a945-bca332aa9de9.jpg?ex=69d559a0&is=69d40820&hm=abece10147210b1062ab0c954d31fae114c15a423732157b0b99e84828dd0d00&
+[Tool] Starting task with prompt: <@&1490127956620611688> 幫我把他的比基尼脫掉
+[Tool] Task submitted. Prompt ID: 40a8149f-7371-43dc-82bf-bda59fbc8cb6
+[Tool] Downloading image via /view: https://still-aimed-recorders-hay.trycloudflare.com/view?filename=compressed_20260406_192323_307781_0009_2319.webp&type=output&subfolder=compressed
+[Tool] Image saved to /root/koboldcpp-config/Hermes/data/temp_outputs/compressed_20260406_192323_307781_0009_2319.webp
+[30;1m2026-04-06 19:23:27[0m [31mERROR   [0m [35mdiscord.client[0m Ignoring exception in on_message
+[31mTraceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/discord/client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/koboldcpp-config/Hermes/src/discord_bot_main.py", line 91, in on_message
+    await processing_msg.edit(content="")
+  File "/usr/local/lib/python3.12/dist-packages/discord/message.py", line 2988, in edit
+    data = await self._state.http.edit_message(self.channel.id, self.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/discord/http.py", line 778, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message[0m
