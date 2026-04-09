@@ -1,9 +1,10 @@
 *.gguf
 koboldcpp-linux-x64
+koboldcpp.exe
 .cache/
 kobold_run.log
 Hermes/logs/*
 Hermes/data/*
 Hermes/.env
 Hermes/data/temp_outputs/*
-Hermes/data/comfyui_output/*
+Hermes/data/comfyui_output/*AI_Brain/

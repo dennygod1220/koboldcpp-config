@@ -1,0 +1,1 @@
+koboldcpp.exe Nemotron-Cascade-2-30B-A3B-heretic-ara-uncensored.i1-Q4_K_M.gguf --usecuda --gpulayers 99 --n-cpu-moe 28 --contextsize 32768 --flashattention --quantkv 2 --threads 5 --batch-size 4096 --host 0.0.0.0 --port 5001
