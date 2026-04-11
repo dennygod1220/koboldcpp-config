@@ -1,3 +1,21 @@
+## gemma-4-26B-A4B-it-heretic-ara.i1-Q4_K_M.gguf
+  ./koboldcpp-linux-x64 gemma-4-26B-A4B-it-heretic-ara.i1-Q4_K_M.gguf \
+  --embeddingsmodel nomic-embed-text-v2-moe.Q8_0.gguf \
+  --mmproj mmproj-google_gemma-4-26B-A4B-it-bf16.gguf \
+  --mmprojcpu \
+  --usecuda \
+  --gpulayers 99 \
+  --n-cpu-moe 20 \
+  --quantkv 3 \
+  --contextsize 98304 \
+  --flashattention \
+  --threads 5 \
+  --useswa \
+  --batch-size 4096 \
+  --multiuser 4 \
+  --defaultgenamt 4096 \
+  --host 0.0.0.0 --port 5001 2>&1 | tee kobold_run.log
+  
 ##  gemma-4-26b-a4b-it-heretic.q4_k_m.gguf + Embed text + mmprojcpu
   ./koboldcpp-linux-x64 gemma-4-26b-a4b-it-heretic.q4_k_m.gguf \
   --embeddingsmodel nomic-embed-text-v2-moe.Q8_0.gguf \

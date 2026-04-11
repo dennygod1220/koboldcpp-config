@@ -8,3 +8,7 @@ Hermes/data/*
 Hermes/.env
 Hermes/data/temp_outputs/*
 Hermes/data/comfyui_output/*AI_Brain/
+.hermes/*
+AI_Brain/*
+/.hermes
+AI_Brain
